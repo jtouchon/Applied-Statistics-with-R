@@ -12,6 +12,8 @@ way, you will learn much more if you have already spent some time
 working through the assignments on your own. If you haven’t done that,
 close this page and go work on it! :)
 
+<span style="color: #009933;">
+
 # Assignment 1
 
 **Create a data frame that contains at least one factor with three
@@ -19,6 +21,8 @@ categories and at least three columns of made up numeric data. Thus, it
 should have at least four columns. Make sure the columns have meaningful
 names. Have at least 10 rows per categories (i.e., at least 30 rows
 long).**
+
+</span>
 
 How should you go about doing this? As with anything in R, there are of
 course many different ways. I will show you how I would do it. The basic
@@ -96,28 +100,28 @@ dietB<-c(rnorm(n=10, mean=20, sd=1), rnorm(n=10, mean=35, sd=1), rnorm(n=10, mea
 control
 ```
 
-    ##  [1] 20.73760 18.49489 20.29219 19.30315 19.77893 20.09687 20.76127 19.17664
-    ##  [9] 18.28501 20.34751 35.39660 33.15432 37.10786 34.98861 34.67859 35.08809
-    ## [17] 34.08877 37.12149 35.84106 34.76877 35.67099 35.10276 34.99480 35.34974
-    ## [25] 35.50952 33.67269 35.42645 34.46863 34.10725 34.63849
+    ##  [1] 20.57930 19.64202 19.63609 20.30259 21.02068 21.21914 20.46042 20.40025
+    ##  [9] 20.54998 20.54167 34.91134 34.41659 34.84291 36.62631 35.00597 35.24791
+    ## [17] 33.61318 36.08048 34.20328 34.55595 33.80103 35.74172 34.67949 34.55104
+    ## [25] 34.24019 34.09101 32.42637 36.04978 35.65781 34.27815
 
 ``` r
 dietA
 ```
 
-    ##  [1] 20.77005 19.52696 20.79268 19.52774 18.95888 19.86203 20.05655 18.29598
-    ##  [9] 19.57891 20.17048 42.86122 43.84275 44.82096 45.72389 46.86677 45.29405
-    ## [17] 44.50662 44.50442 45.33429 42.42970 34.64434 35.87777 35.94290 34.58550
-    ## [25] 35.16833 34.90402 34.31371 34.44284 35.73731 33.26659
+    ##  [1] 20.44656 21.88104 19.38954 19.63994 18.61269 19.82295 22.24552 20.67716
+    ##  [9] 21.16374 18.30282 45.30123 44.87735 44.36788 44.43681 45.01831 45.24333
+    ## [17] 44.12376 46.33203 46.13052 43.87149 36.06228 35.11989 35.46579 32.82102
+    ## [25] 36.89131 35.24342 34.78769 34.79207 33.66657 33.65604
 
 ``` r
 dietB
 ```
 
-    ##  [1] 20.84326 20.94604 20.34134 21.12023 20.24487 19.43296 19.93854 19.18314
-    ##  [9] 18.84347 17.83849 35.89656 36.48618 35.45261 34.67795 35.20229 32.38655
-    ## [17] 34.10399 35.84304 33.56273 33.29140 50.43411 48.97176 48.65341 50.87030
-    ## [25] 50.21583 50.10527 50.64705 49.15345 51.46179 50.00168
+    ##  [1] 20.38696 20.30810 19.51733 22.22456 21.04121 21.23533 19.44910 20.09328
+    ##  [9] 20.82229 19.55889 35.10596 35.73468 35.47627 36.69830 35.81678 36.03984
+    ## [17] 34.31354 34.09483 35.26549 34.58444 50.59671 51.28851 49.07442 50.11708
+    ## [25] 49.77572 50.23377 49.62425 51.89316 49.43520 48.08233
 
 Okay, now we have our four vectors. It’s time to combine them into a
 data frame using the function **data.frame()**. Remember to assign your
@@ -129,36 +133,36 @@ tad_data
 ```
 
     ##    species  control    dietA    dietB
-    ## 1     HGTF 20.73760 20.77005 20.84326
-    ## 2     HGTF 18.49489 19.52696 20.94604
-    ## 3     HGTF 20.29219 20.79268 20.34134
-    ## 4     HGTF 19.30315 19.52774 21.12023
-    ## 5     HGTF 19.77893 18.95888 20.24487
-    ## 6     HGTF 20.09687 19.86203 19.43296
-    ## 7     HGTF 20.76127 20.05655 19.93854
-    ## 8     HGTF 19.17664 18.29598 19.18314
-    ## 9     HGTF 18.28501 19.57891 18.84347
-    ## 10    HGTF 20.34751 20.17048 17.83849
-    ## 11    RETF 35.39660 42.86122 35.89656
-    ## 12    RETF 33.15432 43.84275 36.48618
-    ## 13    RETF 37.10786 44.82096 35.45261
-    ## 14    RETF 34.98861 45.72389 34.67795
-    ## 15    RETF 34.67859 46.86677 35.20229
-    ## 16    RETF 35.08809 45.29405 32.38655
-    ## 17    RETF 34.08877 44.50662 34.10399
-    ## 18    RETF 37.12149 44.50442 35.84304
-    ## 19    RETF 35.84106 45.33429 33.56273
-    ## 20    RETF 34.76877 42.42970 33.29140
-    ## 21    GLDF 35.67099 34.64434 50.43411
-    ## 22    GLDF 35.10276 35.87777 48.97176
-    ## 23    GLDF 34.99480 35.94290 48.65341
-    ## 24    GLDF 35.34974 34.58550 50.87030
-    ## 25    GLDF 35.50952 35.16833 50.21583
-    ## 26    GLDF 33.67269 34.90402 50.10527
-    ## 27    GLDF 35.42645 34.31371 50.64705
-    ## 28    GLDF 34.46863 34.44284 49.15345
-    ## 29    GLDF 34.10725 35.73731 51.46179
-    ## 30    GLDF 34.63849 33.26659 50.00168
+    ## 1     HGTF 20.57930 20.44656 20.38696
+    ## 2     HGTF 19.64202 21.88104 20.30810
+    ## 3     HGTF 19.63609 19.38954 19.51733
+    ## 4     HGTF 20.30259 19.63994 22.22456
+    ## 5     HGTF 21.02068 18.61269 21.04121
+    ## 6     HGTF 21.21914 19.82295 21.23533
+    ## 7     HGTF 20.46042 22.24552 19.44910
+    ## 8     HGTF 20.40025 20.67716 20.09328
+    ## 9     HGTF 20.54998 21.16374 20.82229
+    ## 10    HGTF 20.54167 18.30282 19.55889
+    ## 11    RETF 34.91134 45.30123 35.10596
+    ## 12    RETF 34.41659 44.87735 35.73468
+    ## 13    RETF 34.84291 44.36788 35.47627
+    ## 14    RETF 36.62631 44.43681 36.69830
+    ## 15    RETF 35.00597 45.01831 35.81678
+    ## 16    RETF 35.24791 45.24333 36.03984
+    ## 17    RETF 33.61318 44.12376 34.31354
+    ## 18    RETF 36.08048 46.33203 34.09483
+    ## 19    RETF 34.20328 46.13052 35.26549
+    ## 20    RETF 34.55595 43.87149 34.58444
+    ## 21    GLDF 33.80103 36.06228 50.59671
+    ## 22    GLDF 35.74172 35.11989 51.28851
+    ## 23    GLDF 34.67949 35.46579 49.07442
+    ## 24    GLDF 34.55104 32.82102 50.11708
+    ## 25    GLDF 34.24019 36.89131 49.77572
+    ## 26    GLDF 34.09101 35.24342 50.23377
+    ## 27    GLDF 32.42637 34.78769 49.62425
+    ## 28    GLDF 36.04978 34.79207 51.89316
+    ## 29    GLDF 35.65781 33.66657 49.43520
+    ## 30    GLDF 34.27815 33.65604 48.08233
 
 Hooray, you did it! As discussed earlier, you could choose anything to
 be your categories (e.g., strains of mice in a study, brands of cereal
@@ -167,19 +171,23 @@ to eat, species of plants) and anything for your numeric variables
 content of cereals, growth rates of plants under three different light
 conditions, etc.) Okay, onward and upward.
 
+<span style="color: #009933;">
+
 # Assignment 2
 
 **Once you have a data frame, plot a histogram of your numeric
 variables. Try to dress it up by adding color, changing the limits of
 the axes, and adding a main title. How will you figure out how to do
-that? Look at the help file for **hist()**.**
+that? Look at the help file for** hist()**.**
+
+</span>
 
 The basic goal here is to look at the values in your numeric vectors. If
 you look at the help file for the **hist()** function (which can be done
 by simply typing *?hist* in the console) you will see there are lots and
 lots of options. All of those are *optional* except for *x*, which is
 the vector of values you want to plot. In our data frame, we can access
-our numeric vectors with the **/$** operator. For example, if we want to
+our numeric vectors with the **$** operator. For example, if we want to
 plot a histogram of the vector of sizes we measured in our control diet,
 we can type the following:
 
@@ -221,11 +229,15 @@ changing the title with the *main==* argument, or play with the range
 limits using *xlim=* or *ylim=*. You can even *add* one histogram to an
 existing plot, using the *add=T* argument.
 
+<span style="color: #009933;">
+
 # Assignment 3
 
-**Use the **plot() **function to try and plot your numeric and
+**Use the** plot() **function to try and plot your numeric and
 categorical variables. What happens when you give R different types of
 data to plot?**
+
+</span>
 
 The **plot()** function is a very basic and fundamental function in R.
 We will explore its utility in the coming chapters, but for now let’s
