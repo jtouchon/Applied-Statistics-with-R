@@ -5,7 +5,7 @@ Justin Touchon
 
 This page provides sample answers to the assignment at the end of
 Chapter 5 of Applied Statistics with R: A Practical Guide for the Life
-Sciences by Justin Touchon. Chapter 4 introduces you to *Linear Models*
+Sciences by Justin Touchon. Chapter 5 introduces you to *Linear Models*
 for the first time. Sure, we looked at a few non-parametric tests and
 even Student’s t-test, but really the point of the chapter is learning
 how to conduct a one-way ANOVA. We also continued practicing using
