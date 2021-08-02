@@ -1,5 +1,7 @@
 Chapter 7 Sample Answers
 ================
+Justin Touchon
+8/2/2021
 
 This page provides sample answers to the assignment at the end of
 Chapter 7 of Applied Statistics with R: A Practical Guide for the Life
