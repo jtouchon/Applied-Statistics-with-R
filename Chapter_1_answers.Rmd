@@ -2,7 +2,7 @@
 title: "Chapter 1 answers"
 author: "Justin Touchon"
 date: "7/21/2021"
-output: html_document
+output: github_document
 ---
 
 This page provides sample answers to the assignment at the end of Chapter 1 of Applied Statistics with R: A Practical Guide for the Life Sciences by Justin Touchon. Since the assignment is very open-ended, these answers are truly meant to be *examples* and are not the only answers you can get. My hope is that you are here either because 1) you want to check the answers you got to make sure you completed the assignments correctly, or 2) you got stumped and need some help. Either way, you will learn much more if you have already spent some time working through the assignments on your own. If you haven't done that, close this page and go work on it! :)
