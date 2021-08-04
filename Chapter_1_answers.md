@@ -41,7 +41,11 @@ which we will abbreviate “HGTF”, red-eyed treefrogs, which will be
 
 <div class="figure">
 
+<<<<<<< HEAD
 <img src="/Users/jutouchon/Desktop/Stats_Book/github_staging/pdf_versions/Treefrog_collage_small.png" alt="Three beautiful treefrogs from Central America. Photos by Justin Touchon." width="100%" />
+=======
+<img src="https://github.com/jtouchon/Applied-Statistics-with-R/blob/master/Treefrog_collage.png" alt="Three beautiful treefrogs from Central America. Photos by Justin Touchon." width="100%" />
+>>>>>>> ef1f6fafc6586cd63aca2f777c429b44aada21b7
 <p class="caption">
 Three beautiful treefrogs from Central America. Photos by Justin
 Touchon.
