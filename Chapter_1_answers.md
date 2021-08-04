@@ -39,7 +39,15 @@ hourglass treefrogs (the species pictured on the cover of the book),
 which we will abbreviate “HGTF”, red-eyed treefrogs, which will be
 “RETF”, and Rosenberg’s gladiator frog, or “GLDF”.
 
-**ADD PHOTOS OF THE THREE SPECIES**
+<div class="figure">
+
+<img src="/Users/jutouchon/Desktop/Stats_Book/github_staging/pdf_versions/Treefrog_collage.png" alt="Three beautiful treefrogs from Central America. Photos by Justin Touchon." width="100%" />
+<p class="caption">
+Three beautiful treefrogs from Central America. Photos by Justin
+Touchon.
+</p>
+
+</div>
 
 In order to make our factor, we can combine the functions **rep()** and
 **c()**. Each species abbreviation is repeated 10 times, and those
@@ -102,28 +110,28 @@ dietB<-c(rnorm(n=10, mean=20, sd=1), rnorm(n=10, mean=35, sd=1), rnorm(n=10, mea
 control
 ```
 
-    ##  [1] 20.17443 20.02090 21.14763 19.99478 21.73200 18.92953 20.82161 18.99261
-    ##  [9] 20.72873 19.68664 34.56549 35.02984 33.65618 36.18147 34.71558 34.55194
-    ## [17] 35.34544 33.35104 35.16094 36.24489 34.22293 36.19469 35.32442 34.86937
-    ## [25] 34.92551 34.67136 35.11028 34.19481 34.91127 36.27236
+    ##  [1] 18.72820 19.25319 20.02667 20.53807 21.70795 19.18794 20.46985 20.53921
+    ##  [9] 19.85295 19.56012 35.31645 34.71770 34.17401 35.72189 36.44019 37.07270
+    ## [17] 35.65670 36.41321 35.92935 35.38766 36.06378 35.53255 36.27463 36.18571
+    ## [25] 35.86848 35.22114 35.91084 33.62659 35.90005 34.69478
 
 ``` r
 dietA
 ```
 
-    ##  [1] 19.09213 20.83385 19.19284 19.94042 21.67629 20.51184 19.07907 19.76733
-    ##  [9] 20.05211 20.43736 42.29968 43.06605 44.82587 42.40482 44.45472 44.74996
-    ## [17] 45.36806 44.58523 44.33072 44.28197 35.79729 35.59719 35.57811 33.89621
-    ## [25] 34.83084 35.02663 35.07970 34.91181 33.77382 33.96186
+    ##  [1] 19.80887 20.97408 19.28349 19.78560 21.51255 20.68965 18.70359 20.05042
+    ##  [9] 20.60273 19.61472 46.89170 44.70118 45.53681 44.43668 43.44987 45.91863
+    ## [17] 46.57123 44.51752 43.90210 43.92974 33.64489 35.81771 33.67199 35.35231
+    ## [25] 34.43491 35.09164 35.62986 35.51828 34.45973 34.93001
 
 ``` r
 dietB
 ```
 
-    ##  [1] 20.89480 19.76709 21.24921 20.31466 19.04726 21.51374 19.57992 19.74502
-    ##  [9] 18.49013 17.91113 37.35305 33.98273 33.70523 35.42741 34.35397 33.73277
-    ## [17] 35.13324 34.47162 35.05560 32.58315 51.18535 49.81602 50.22432 50.15823
-    ## [25] 49.51805 50.42307 49.45128 49.25580 50.24656 49.14009
+    ##  [1] 20.07010 21.17149 19.77113 17.29299 21.17832 19.17521 18.76150 19.79559
+    ##  [9] 20.45179 18.93592 34.67616 35.41856 36.07618 34.86487 35.40879 35.04479
+    ## [17] 35.39606 35.68920 35.04038 34.55321 49.89447 51.27379 49.06495 48.42376
+    ## [25] 50.04472 49.75383 50.62677 50.65833 49.89301 50.81600
 
 Okay, now we have our four vectors. It’s time to combine them into a
 data frame using the function **data.frame()**. Remember to assign your
@@ -135,36 +143,36 @@ tad_data
 ```
 
     ##    species  control    dietA    dietB
-    ## 1     HGTF 20.17443 19.09213 20.89480
-    ## 2     HGTF 20.02090 20.83385 19.76709
-    ## 3     HGTF 21.14763 19.19284 21.24921
-    ## 4     HGTF 19.99478 19.94042 20.31466
-    ## 5     HGTF 21.73200 21.67629 19.04726
-    ## 6     HGTF 18.92953 20.51184 21.51374
-    ## 7     HGTF 20.82161 19.07907 19.57992
-    ## 8     HGTF 18.99261 19.76733 19.74502
-    ## 9     HGTF 20.72873 20.05211 18.49013
-    ## 10    HGTF 19.68664 20.43736 17.91113
-    ## 11    RETF 34.56549 42.29968 37.35305
-    ## 12    RETF 35.02984 43.06605 33.98273
-    ## 13    RETF 33.65618 44.82587 33.70523
-    ## 14    RETF 36.18147 42.40482 35.42741
-    ## 15    RETF 34.71558 44.45472 34.35397
-    ## 16    RETF 34.55194 44.74996 33.73277
-    ## 17    RETF 35.34544 45.36806 35.13324
-    ## 18    RETF 33.35104 44.58523 34.47162
-    ## 19    RETF 35.16094 44.33072 35.05560
-    ## 20    RETF 36.24489 44.28197 32.58315
-    ## 21    GLDF 34.22293 35.79729 51.18535
-    ## 22    GLDF 36.19469 35.59719 49.81602
-    ## 23    GLDF 35.32442 35.57811 50.22432
-    ## 24    GLDF 34.86937 33.89621 50.15823
-    ## 25    GLDF 34.92551 34.83084 49.51805
-    ## 26    GLDF 34.67136 35.02663 50.42307
-    ## 27    GLDF 35.11028 35.07970 49.45128
-    ## 28    GLDF 34.19481 34.91181 49.25580
-    ## 29    GLDF 34.91127 33.77382 50.24656
-    ## 30    GLDF 36.27236 33.96186 49.14009
+    ## 1     HGTF 18.72820 19.80887 20.07010
+    ## 2     HGTF 19.25319 20.97408 21.17149
+    ## 3     HGTF 20.02667 19.28349 19.77113
+    ## 4     HGTF 20.53807 19.78560 17.29299
+    ## 5     HGTF 21.70795 21.51255 21.17832
+    ## 6     HGTF 19.18794 20.68965 19.17521
+    ## 7     HGTF 20.46985 18.70359 18.76150
+    ## 8     HGTF 20.53921 20.05042 19.79559
+    ## 9     HGTF 19.85295 20.60273 20.45179
+    ## 10    HGTF 19.56012 19.61472 18.93592
+    ## 11    RETF 35.31645 46.89170 34.67616
+    ## 12    RETF 34.71770 44.70118 35.41856
+    ## 13    RETF 34.17401 45.53681 36.07618
+    ## 14    RETF 35.72189 44.43668 34.86487
+    ## 15    RETF 36.44019 43.44987 35.40879
+    ## 16    RETF 37.07270 45.91863 35.04479
+    ## 17    RETF 35.65670 46.57123 35.39606
+    ## 18    RETF 36.41321 44.51752 35.68920
+    ## 19    RETF 35.92935 43.90210 35.04038
+    ## 20    RETF 35.38766 43.92974 34.55321
+    ## 21    GLDF 36.06378 33.64489 49.89447
+    ## 22    GLDF 35.53255 35.81771 51.27379
+    ## 23    GLDF 36.27463 33.67199 49.06495
+    ## 24    GLDF 36.18571 35.35231 48.42376
+    ## 25    GLDF 35.86848 34.43491 50.04472
+    ## 26    GLDF 35.22114 35.09164 49.75383
+    ## 27    GLDF 35.91084 35.62986 50.62677
+    ## 28    GLDF 33.62659 35.51828 50.65833
+    ## 29    GLDF 35.90005 34.45973 49.89301
+    ## 30    GLDF 34.69478 34.93001 50.81600
 
 Hooray, you did it! As discussed earlier, you could choose anything to
 be your categories (e.g., strains of mice in a study, brands of cereal
@@ -197,7 +205,7 @@ we can type the following:
 hist(tad_data$control)
 ```
 
-![](Chapter_1_answers_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](Chapter_1_answers_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 If you do that, you might get something very unhelpful, like I have
 here. In a function like **hist()**, R is going to try to choose a set
@@ -210,7 +218,7 @@ like.
 hist(tad_data$control, breaks=20)
 ```
 
-![](Chapter_1_answers_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](Chapter_1_answers_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
 We can see a cluster of data representing our smallest species and a
 larger cluster o values representing the two larger species. You should
@@ -224,7 +232,7 @@ whatever you want. (hint: type **colors()** in the console)
 hist(tad_data$control, breaks=20, xlab="Sizes of hypothetical tadpoles (mm)", col="seagreen")
 ```
 
-![](Chapter_1_answers_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](Chapter_1_answers_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 There are lots of other ways to dress up a figure. Play around with
 changing the title with the *main==* argument, or play with the range
@@ -253,7 +261,7 @@ three bars that are each 10 high.
 plot(tad_data$species)
 ```
 
-![](Chapter_1_answers_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](Chapter_1_answers_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 What happens if we provide a vector of numeric values? R will plot each
 of the values in our vector on the y-axis, with the x-axis being the row
@@ -266,7 +274,7 @@ smaller than values 11–30, which correspond to the two larger species.
 plot(tad_data$control)
 ```
 
-![](Chapter_1_answers_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](Chapter_1_answers_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 In the coming chapters we will explore what happens if you provide
 combinations of vectors as the x- and y-values, and we will begin
